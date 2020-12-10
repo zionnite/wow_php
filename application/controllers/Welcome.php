@@ -6,6 +6,7 @@ class Welcome extends My_Controller {
         parent::__construct();
     }
 	public function index(){
+        $data['content'] ='';
 		$this->load->view('welcome_message');
 	}
 

@@ -7,6 +7,7 @@ class Welcome extends My_Controller {
     }
 	public function index(){
         $data['content'] ='';
+        $data['content'] ='1';
 		$this->load->view('welcome_message');
 	}
 

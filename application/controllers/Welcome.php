@@ -136,6 +136,4 @@ class Welcome extends My_Controller {
         }
         echo json_encode($msg);
 	}
-
-
 }

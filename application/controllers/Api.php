@@ -136,6 +136,7 @@ class Api extends My_Controller {
 
                 $msg      =array('id'=>$id,'title'=>$title,'desc'=>$desc,'image'=>$image,'author'=>$author,'author_image'=>$author_img,'time'=>$time,'type'=>$type,'status'=>'success','status_msg'=>'Data fetched successfully','data'=>$data);
 
+
             }
         }else{
             $msg[]  =array('status'=>'fail','status_msg'=>'Couldn\'t fetch data from server');

@@ -594,5 +594,25 @@ class Api extends My_Controller {
     }
 
 
+    public function send_private_message(){
+        $msg =array();
+
+        $name       = $this->input->post('name');
+        $email      = $this->input->post('email');
+        $message    = $this->input->post('message');
+
+        $data       = array('name'=>$name,'email'=>$email, 'message'=>$message,'date'=>date('Y-m-d'), 'time'=>time(),'status'=>'0');
+
+        $this->db->set($data);
+        $this->db->insert('message');
+
+        if($this->db->affected_rows() > 0){
+            $msg['status'] = true;
+
+        }else{
+            $msg['status'] = false;
+        }
+        echo json_encode($msg);
+    }
 
 }
